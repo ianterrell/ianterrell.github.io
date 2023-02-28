@@ -1,0 +1,86 @@
+---
+layout: book
+chapter: 1
+title: Hello Worlds
+book: learn-to-code
+category: chapter
+---
+<section>
+  <h2>
+    The canonical introduction
+  </h2>
+  <p>
+    The usual place to start when learning a programming language — and learning to program at all — is to write a small program that writes "Hello, world!" to the screen. This dates to the 70s and the C programming language. There was programming before C, but apparently no one wrote Hello World programs. So let's start with the original.
+  </p>
+  <span class="marginnote">
+    This is a margin note. Notice there isn’t a number preceding the note.
+  </span>
+
+  {% code_link c hello_world.c https://replit.com/@IanTerrell1/helloworldc#main.c %}
+  {% highlight c %}
+#include <stdio.h>
+
+int main() {
+  printf("Hello, world!\n");
+  return 0;
+}
+{% endhighlight %}
+  <p>
+    Computer programming is partially about writing code. But it's also about reading code, and it's also about thinking. If I try very hard to look at this code with a beginner's mind — which is not all that hard, as I don't write much C code — I notice several things.
+  </p>
+  <p>
+    I notice: the code is in color! It's in color because source code for most programming languages is incredibly informationally dense, and color helps delineate between different parts that play different roles. When you set up your text editor, you will want to make sure that source code highlighting is enabled for the languages you use.
+  </p>
+  <p>
+    I notice: all of the letters line up. Most source code is written in monospaced fonts. Like color can help you parse the code, spacing can as well. Computer programming has a visual element.
+  </p>
+  <p>
+    I notice: there are English language words (<code>include</code>, <code>main</code>, <code>return</code>, <code>Hello, world!</code>), groups of letters that look like they could words but are not (<code>int</code>, <code>printf</code>), groups of letters that don't really look like words (<code>stdio</code>), characters that are commonly in use in English writing (<code>#.()";</code>), characters that aren't (<code><>{}\</code>), plus a number and maybe even some other things depending on how you slice it up.
+  </p>
+  <p>
+    What does it all mean? Judging just by the colors there appear to be several things going on. And there are! We'll get to them all in due time. But let's keep going.
+  </p>
+</section>
+<section>
+  <h2>
+    A tour
+  </h2>
+  <p>
+    There are a lot of programming languages. Many are derived from C.
+  </p>
+  <figure>
+    <label for="mn-exports-imports" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-exports-imports" class="margin-toggle"/>
+    <span class="marginnote">
+      <a href="https://www.digibarn.com/collections/posters/tongues/" target="_blank">Mother Tongues of Computer Languages poster</a>
+    </span>
+    <img src="{{ "/assets/images/ComputerLanguagesChart-med.png" | relative_url }}"/>
+  </figure>
+  <p>
+    Let's look at some Hello World programs in a few other languages: Ruby, Python, and Clojure.
+  </p>
+
+{% code_link ruby hello_world.rb https://replit.com/@IanTerrell1/helloworldrb#main.rb %}
+{% highlight ruby %}
+puts 'Hello, World!'
+{% endhighlight %}
+
+{% code_link python hello_world.py https://replit.com/@IanTerrell1/helloworldpy#main.py %}
+{% highlight ruby %}
+print("Hello, World!")
+{% endhighlight %}
+
+{% code_link clojure hello_world.clj https://replit.com/@IanTerrell1/helloworldclj#main.clj %}
+{% highlight ruby %}
+(println "Hello, World!")
+{% endhighlight %}
+
+  <p>
+    Parentheses are not the most important thing to notice, but they may be the most conspicuous. The Ruby program needs none at all, while the Python one puts them in one place, and the Clojure one puts them in another.
+  </p>
+  <p>
+    The most important thing to notice might be that these programs are all much shorter and more straightforward than the original C equivalent above. The parentheses are so conspicuous <i>because</i> of this. There's very little to each program, and they all look very much alike. We have three things: a word in white that reads as an English verb quite clearly in the Python example, a quoted bit of text, and some parentheses that tie them together (sometimes). In this case, like most of English writing, the punctuation is useful but is not the main event. We really have two things: a quote and a verb.
+  </p>
+  <p>
+    Generalizing, the two things we have are <i>data</i> and <i>behavior</i>. That is what programming is: take some data and go do something with it. The rest of this book is merely an elaboration on that.
+  </p>
+</section>

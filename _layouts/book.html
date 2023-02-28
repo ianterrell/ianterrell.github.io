@@ -3,9 +3,10 @@ layout: base
 ---
 <article>
   <h1>{{ page.title | escape }}</h1>
-  {%- if page.subtitle -%}
-    <p class="subtitle">{{ page.subtitle | escape }}</p>
+  {%- if page.chapter -%}
+    <p class="subtitle">Chapter {{ page.chapter }}</p>
   {%- endif -%}
+
   <div>
     {{ content }}
   </div>
